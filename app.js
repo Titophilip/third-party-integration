@@ -1,7 +1,7 @@
 const bodyparser = require("body-parser");
 const dotenv = require("dotenv");
 const express = require("express");
-const { eMesssage } = require("./utils/emailTemplate.js");
+const { eMessage } = require("./utils/emailTemplate.js");
 const { sendMail } = require("./utils/emailSender.js");
 
 dotenv.config();
