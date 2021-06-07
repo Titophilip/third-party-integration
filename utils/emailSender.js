@@ -11,12 +11,12 @@ exports.sendMail = async (option) => {
         }
     })
 
-    const emailOption = {
+    const mailOptions = {
         from: `${option.name} <${option.email}>`,
         to: process.env.YOUR_EMAIL,
         subject: `CONTACT US FORM: ${option.subject}`,
         html: option.message
     }
 
-    transporter.sendMail(emailOption[, callback])
+    await transporter.sendMail(mailOptions)
 }
