@@ -22,6 +22,12 @@ app.post("/profile", async(req, res) => {
         if (!name && !email && !subject && !message ) {
             return res.json({ message: "Incomplete data." })
         }
+        await sendMail({
+            name,
+            email,
+            subject,
+            message
+        })
     } catch (error) {
         console.log(error)
     }
