@@ -16,7 +16,7 @@ app.listen(PORT, () => {
 app.post("/profile", async(req, res) => {
     const { name, email, subject, message } = req.body
     try {
-        if (!name || !email || !subject ||!message ) {
+        if (!name && !email && !subject && !message ) {
             return res.json({ message: "Incomplete data." })
         }
     } catch (error) {
