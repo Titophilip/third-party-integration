@@ -13,4 +13,13 @@ app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}.`);
 });
 
-app.post("/profile", )
+app.post("/profile", async(req, res) => {
+    const { name, email, subject, message } = req.body
+    try {
+        if (!name || !email || !subject ||!message ) {
+            return res.json({ message: "Incomplete data." })
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
