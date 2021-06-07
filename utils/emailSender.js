@@ -13,8 +13,10 @@ exports.sendMail = async (option) => {
 
     const emailOption = {
         from: `${option.name} <${option.email}>`,
-        to: ``,
-        subject: ``,
-        message: ``,
+        to: process.env.YOUR_EMAIL,
+        subject: `CONTACT US FORM: ${option.subject}`,
+        html: option.message
     }
+
+    transporter.sendMail(emailOption[, callback])
 }
