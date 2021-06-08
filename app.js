@@ -26,7 +26,7 @@ app.post("/profile", async(req, res) => {
             name,
             email,
             subject,
-            message: await eMessage(name, email, subject, message)
+            message: await eMessage(message)
         })
         res.status(201).json({ Message: "Email sent successfully." })
     } catch (error) {
