@@ -23,6 +23,9 @@ app.post("/profile", async(req, res) => {
             return res.json({ message: "Incomplete data." })
         }
         await sendMail({
+            name,
+            email,
+            subject,
             message: await eMessage(name, email, subject, message)
         })
         res.status(201).json({ Message: "Email sent successfully." })

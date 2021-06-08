@@ -1,4 +1,4 @@
-exports.eMessage = async (name, email, subject, message) => {
+exports.eMessage = async (message) => {
     const html = `
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +12,7 @@ exports.eMessage = async (name, email, subject, message) => {
     <h2>Get in touch with me</h2>
 
     <div>
-        <p>Name: ${name}</p>
-        <p>Email: ${email}</p>
-        <p>Subject: ${subject}</p>
-        <p>Message: ${message}</p>
+        <p>${message}</p>
     </div>
 </body>
 </html>`
