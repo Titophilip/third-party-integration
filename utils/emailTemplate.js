@@ -12,10 +12,10 @@ exports.eMessage = async (name, email, subject, message) => {
     <h2>Get in touch with me</h2>
 
     <div>
-        Name: ${name}
-        Email: ${email}
-        Subject: ${subject}
-        Message: ${message}
+        <p>Name: ${name}</p>
+        <p>Email: ${email}</p>
+        <p>Subject: ${subject}</p>
+        <p>Message: ${message}</p>
     </div>
 </body>
 </html>`
